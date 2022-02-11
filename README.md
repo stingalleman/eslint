@@ -1,17 +1,14 @@
-# Tribecamp Style Guide
-
-The ESLint config Tribecamp uses.
+# Sting's Eslint configs
 
 ## Installation
 
-There are four packages available. Each of them can be installed with `yarn add --dev @tribecamp/eslint-config-<name>`.
+There are four packages available. Each of them can be installed with `yarn add --dev @stingalleman/eslint-config-<name>`.
 The following packages can be installed:
 
 ```txt
-@tribecamp/eslint-config-base
-@tribecamp/eslint-config-jest
-@tribecamp/eslint-config-typescript
-@tribecamp/eslint-config-vue
+@stingalleman/eslint-base
+@stingalleman/eslint-jest
+@stingalleman/eslint-typescript
 ```
 
 You may then extend the installed package(s) in your `.eslintrc.js`, like this:
@@ -19,10 +16,9 @@ You may then extend the installed package(s) in your `.eslintrc.js`, like this:
 ```js
 module.exports = {
   extends: [
-    '@tribecamp/base',
-    '@tribecamp/jest',
-    '@tribecamp/typescript',
-    '@tribecamp/vue'
+    '@stingalleman/base',
+    '@stingalleman/jest',
+    '@stingalleman/typescript',
   ]
 };
 ```

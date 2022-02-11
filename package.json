@@ -1,14 +1,21 @@
 {
-  "name": "@tribecamp/eslint",
-  "description": "The ESLint config Tribecamp uses.",
-  "repository": "https://github.com/tribecamp/eslint",
-  "author": "Tribecamp",
+  "name": "@stingalleman/eslint",
+  "version": "1.0.0",
+  "repository": "https://github.com/stingalleman/eslint",
   "license": "MIT",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "dependencies": {},
   "devDependencies": {
-    "lerna": "3.22.1"
+    "@typescript-eslint/eslint-plugin": "5.11.0",
+    "eslint": "8.8.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-deprecation": "^1.2.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-jsdoc": "37.8.2",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-unicorn": "40.1.0"
   }
 }

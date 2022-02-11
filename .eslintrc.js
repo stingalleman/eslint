@@ -1,6 +1,11 @@
 module.exports = {
-  extends: ['airbnb-base'],
-  plugins: ['jsdoc', 'unicorn'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:unicorn/recommended',
+    'airbnb-base',
+    'prettier',
+  ],
+  plugins: ['@typescript-eslint', 'deprecation', 'jsdoc', 'unicorn'],
   rules: {
     'no-return-await': 'off',
     'max-classes-per-file': 'off',
@@ -34,14 +39,26 @@ module.exports = {
       'error',
       {
         props: true,
-        ignorePropertyModificationsFor: [
-          'state'
-        ]
-      }
+        ignorePropertyModificationsFor: ['state'],
+      },
     ],
-    'unicorn/better-regex': 'error',
-    'unicorn/prefer-spread': 'error',
-    'unicorn/prefer-string-slice': 'error',
-    'unicorn/throw-new-error': 'error'
-  }
+    // "unicorn/better-regex": "error",
+    // "unicorn/prefer-spread": "error",
+    // "unicorn/prefer-string-slice": "error",
+    // "unicorn/throw-new-error": "error",
+    '@typescript-eslint/return-await': ['error', 'always'],
+    '@typescript-eslint/explicit-function-return-type': 1,
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/no-explicit-any': 2,
+    '@typescript-eslint/no-unused-expressions': 2,
+    '@typescript-eslint/array-type': [
+      'error',
+      {
+        default: 'array',
+        readonly: 'array',
+      },
+    ],
+    'deprecation/deprecation': 'warn',
+  },
 };
